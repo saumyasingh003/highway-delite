@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from "mongoose";
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID } from 'crypto';
 
 export interface IPromo extends Document {
   code: string;
@@ -12,8 +12,8 @@ export interface IPromo extends Document {
 }
 
 const generatePromoCode = (): string => {
-  // Generate UUID, remove non-alphanumeric, take first 6 chars
-  return uuidv4().replace(/[^a-zA-Z0-9]/g, "").substring(0, 6).toUpperCase();
+  // Use crypto.randomUUID instead of 'uuid' package to avoid ESM/CommonJS interop issues
+  return randomUUID().replace(/[^a-zA-Z0-9]/g, "").substring(0, 6).toUpperCase();
 };
 
 const promoSchema = new Schema<IPromo>({

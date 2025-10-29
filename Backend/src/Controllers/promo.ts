@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID } from 'crypto';
 import Promo from "../Models/Promo";
 
 // Generate a random promo code
 const generateRandomPromoCode = (): string => {
-  return uuidv4().replace(/[^A-Z0-9]/g, '').substring(0, 8).toUpperCase();
+  // Use Node's built-in crypto.randomUUID to avoid ESM/CommonJS interop issues with 'uuid' package
+  return randomUUID().replace(/[^A-Z0-9]/gi, '').substring(0, 8).toUpperCase();
 };
 
 // Generate random discount value
