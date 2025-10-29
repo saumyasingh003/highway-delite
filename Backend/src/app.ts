@@ -8,13 +8,13 @@ import bookingRoutes from "./Routes/booking";
 import promoRoutes from "./Routes/promo";
 import authRoutes from "./Routes/auth";
 import { errorHandler } from "./Middleware/errorHandler";
-
-
+import cors from "cors";
 dotenv.config();
 connectDB().catch((err) => console.error("DB connection error:", err));
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 
 // Routes
