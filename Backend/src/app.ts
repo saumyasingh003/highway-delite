@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 import dotenv from "dotenv";
 import connectDB = require("./config/db");
 
@@ -15,9 +14,8 @@ dotenv.config();
 connectDB().catch((err) => console.error("DB connection error:", err));
 
 const app = express();
-
-app.use(cors());
 app.use(express.json());
+
 
 // Routes
 app.use("/api/experiences", experienceRoutes);
