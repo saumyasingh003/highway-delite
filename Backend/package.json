@@ -20,8 +20,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^8.19.2",
-    "uuid": "^13.0.0"
+    "mongoose": "^8.19.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
