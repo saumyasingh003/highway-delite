@@ -29,7 +29,7 @@ const ExperienceDetail: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/experiences/${id}`)
+      .get(`https://highway-delite-server-six.vercel.app/api/experiences/${id}`)
       .then((res) => setExperience(res.data))
       .catch((err) => console.error("Error fetching experience:", err));
   }, [id]);

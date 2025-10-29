@@ -23,7 +23,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   useEffect(() => {
     // Ensure axios will target backend API during development
-  axios.defaults.baseURL = 'http://localhost:5000';
+  axios.defaults.baseURL = 'https://highway-delite-server-six.vercel.app';
     const t = localStorage.getItem('token');
     const u = localStorage.getItem('user');
     if (t) {

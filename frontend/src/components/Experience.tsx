@@ -29,7 +29,7 @@ const Experiences: React.FC = () => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/experiences");
+        const res = await axios.get("https://highway-delite-server-six.vercel.app/api/experiences");
         setExperiences(res.data);
       } catch (error) {
         console.error("Error fetching experiences:", error);

@@ -20,7 +20,7 @@ const PromoValidate: React.FC = () => {
   const fetchPromo = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/api/promo/random");
+      const response = await axios.get("https://highway-delite-server-six.vercel.app/api/promo/random");
       if (response.data.promo) {
         setPromo(response.data.promo);
         setError("");

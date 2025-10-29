@@ -83,7 +83,7 @@ const Booking: React.FC = () => {
             }
 
       // Validate the entered promo code
-      const response = await axios.post("http://localhost:5000/api/promo/validate", {
+      const response = await axios.post("https://highway-delite-server-six.vercel.app/api/promo/validate", {
         code: form.promo,
         userId: state.userId // Pass user ID if available
       });
@@ -335,7 +335,7 @@ const Booking: React.FC = () => {
                 promoCode: promoCode || undefined,
               };
 
-              const response = await axios.post('http://localhost:5000/api/bookings', bookingData);
+              const response = await axios.post('https://highway-delite-server-six.vercel.app/api/bookings', bookingData);
 
               if (response.status === 201) {
                 navigate('/payment', {
