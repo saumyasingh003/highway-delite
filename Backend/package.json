@@ -2,11 +2,11 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/index.ts",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only api/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only api/index.ts",
     "build": "tsc",
-    "start": "node api/server.ts",
+    "start": "node api/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
